@@ -530,6 +530,7 @@
     /* ── CAROUSEL (EJES) ── */
     .eje-carousel {
       position: relative;
+      --carousel-aspect: 16 / 10;
       border-radius: var(--radius);
       overflow: hidden;
       border: 1px solid var(--borde);
@@ -539,10 +540,12 @@
 
     .eje-carousel-viewport {
       overflow: hidden;
+      aspect-ratio: var(--carousel-aspect);
     }
 
     .eje-carousel-track {
       display: flex;
+      height: 100%;
       transform: translate3d(0, 0, 0);
       transition: transform 480ms cubic-bezier(0.2, 0.8, 0.2, 1);
     }
@@ -550,11 +553,14 @@
     .eje-carousel-track img {
       flex: 0 0 100%;
       width: 100%;
-      height: 320px;
+      height: 100%;
       display: block;
       object-fit: cover;
+      object-position: center;
       background: rgba(0, 0, 0, 0.04);
     }
+
+    .eje-carousel.is-hero { --carousel-aspect: 16 / 9; }
 
     .eje-carousel-btn {
       position: absolute;
@@ -624,7 +630,8 @@
     }
 
     @media (max-width: 768px) {
-      .eje-carousel-track img { height: 260px; }
+      .eje-carousel { --carousel-aspect: 4 / 3; }
+      .eje-carousel.is-hero { --carousel-aspect: 4 / 3; }
       .eje-carousel-btn { width: 38px; height: 38px; }
     }
 
@@ -724,7 +731,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .hero          { grid-template-columns: 1fr; padding-top: 100px; }
-      .hero-visual   { display: none; }
+      .hero-visual   { display: block; margin-top: 2rem; }
       #quienes .inner,
       #valores .inner,
       #contacto .inner { grid-template-columns: 1fr; gap: 2.5rem; }
