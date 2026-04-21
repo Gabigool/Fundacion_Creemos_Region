@@ -446,6 +446,16 @@
     .footer-logo {
       font-family: var(--ff-display);
       font-size: 1.4rem; color: #fff; font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+
+    .footer-logo img {
+      height: 40px;
+      width: auto;
+      display: block;
     }
 
     .footer-nit {
