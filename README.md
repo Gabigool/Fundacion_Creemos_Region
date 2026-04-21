@@ -2,6 +2,12 @@
 
 **Sitio web oficial de la Fundación Creemos Región**, organización privada sin ánimo de lucro dedicada al desarrollo social integral en Villavicencio, Meta, desde 2009.
 
+### ℹ️ Información Institucional
+- **Tipo**: Organización privada sin ánimo de lucro
+- **Ubicación**: Villavicencio, Meta - Colombia
+- **Fundación**: 2009
+- **Enfoque**: Desarrollo social integral a través de 6 ejes estratégicos
+
 ---
 
 ## 📋 Contenido del Proyecto
@@ -10,22 +16,22 @@
 
 | Archivo | Descripción |
 |---------|-------------|
-| **index.html** | Página principal con información sobre la fundación, programas y contacto |
-| **transparencia-esal.html** | Página de transparencia y rendición de cuentas (ESAL) |
-| **eje-template.html** | Plantilla base para las páginas de ejes temáticos |
+| **index.html** | Página principal: información institucional, programas, valores y contacto |
+| **transparencia-esal.html** | Página de transparencia y rendición de cuentas (requisitos ESAL) |
+| **eje-template.html** | Plantilla base reutilizable para páginas de ejes temáticos |
 
-### Ejes Temáticos (Programas)
+### Ejes Temáticos - Programas Estratégicos
 
-Cada eje representa un área de trabajo de la fundación:
+Cada eje representa un área de intervención y trabajo de la fundación:
 
-| Eje | Archivo | Estado |
-|-----|---------|--------|
-| 🏥 **Salud** | `eje-salud.html` | 90% completo |
-| 📚 **Educación** | `eje-educacion.html` | 90% completo |
-| 💰 **Mejoramiento del Ingreso** | `eje-mejoramiento-del-ingreso.html` | 90% completo |
-| 🤝 **Participación Social** | `eje-participacion-social.html` | 90% completo |
-| ⚽ **Recreación y Deporte** | `eje-recreacion-y-deporte.html` | 90% completo |
-| 🏢 **Desarrollo Comunitario Empresarial** | `eje-desarrollo-comunitario-empresarial.html` | 90% completo |
+| Eje | Archivo | Descripción |
+|-----|---------|-------------|
+| 🏥 **Salud** | `eje-salud.html` | Promoción de salud y bienestar en poblaciones vulnerables |
+| 📚 **Educación** | `eje-educacion.html` | Acceso a educación de calidad y formación integral |
+| 💰 **Mejoramiento del Ingreso** | `eje-mejoramiento-del-ingreso.html` | Generación de oportunidades económicas y emprendimiento |
+| 🤝 **Participación Social** | `eje-participacion-social.html` | Empoderamiento comunitario y ciudadanía activa |
+| ⚽ **Recreación y Deporte** | `eje-recreacion-y-deporte.html` | Actividad física, deporte y desarrollo integral |
+| 🏢 **Desarrollo Comunitario Empresarial** | `eje-desarrollo-comunitario-empresarial.html` | Fortalecimiento empresarial y tejido productivo local |
 
 ---
 
@@ -33,24 +39,35 @@ Cada eje representa un área de trabajo de la fundación:
 
 ```
 Fundación/
-├── index.html                                  # Página principal
-├── transparencia-esal.html                     # Página de transparencia
-├── eje-template.html                           # Plantilla para ejes
-├── eje-salud.html                              # Eje de salud
-├── eje-educacion.html                          # Eje de educación
-├── eje-mejoramiento-del-ingreso.html          # Eje de mejoramiento del ingreso
-├── eje-participacion-social.html               # Eje de participación social
-├── eje-recreacion-y-deporte.html               # Eje de recreación y deporte
-├── eje-desarrollo-comunitario-empresarial.html # Eje empresarial
+├── index.html                                   # Página principal
+├── transparencia-esal.html                      # Página de transparencia y ESAL
+├── eje-template.html                            # Plantilla base para ejes
 │
-├── 📂 assets/
+├── 📂 PÁGINAS DE EJES/
+│   ├── eje-salud.html
+│   ├── eje-educacion.html
+│   ├── eje-mejoramiento-del-ingreso.html
+│   ├── eje-participacion-social.html
+│   ├── eje-recreacion-y-deporte.html
+│   └── eje-desarrollo-comunitario-empresarial.html
+│
+├── 📂 ASSETS/
 │   ├── 📂 css/
-│   │   └── styles.css                          # Estilos principales (variables CSS, responsive)
-│   ├── 📂 img/                                 # ❌ VACÍO - Falta agregar imágenes
+│   │   └── styles.css                          # Estilos principales
+│   ├── 📂 img/
+│   │   ├── favicon.svg
+│   │   ├── logo.jpg
+│   │   └── 📂 ejes/                            # Imágenes por eje
+│   │       ├── desarrollo/
+│   │       ├── educacion/
+│   │       ├── ingresos/
+│   │       ├── participacion/
+│   │       ├── recreacion/
+│   │       └── salud/
 │   └── 📂 js/
-│       └── main.js                             # Scripts (lazy loading, formularios)
+│       └── main.js                             # JavaScript personalizado
 │
-├── 📂 docs/
+├── 📂 DOCS/ (Documentación Legal & Financiera)
 │   ├── 📂 certificaciones/
 │   │   ├── certificado-existencia-representacion.txt
 │   │   └── rut.txt
@@ -64,174 +81,312 @@ Fundación/
 │       ├── informe-gestion-2025.txt
 │       └── rendicion-cuentas-2025.txt
 │
-└── README.md                                   # Este archivo
+├── README.md                                    # Este archivo
+└── .gitignore                                   # (Opcional) Archivos ignorados
 ```
 
 ---
 
-## ✅ Lo que Está Implementado
+## ✅ Lo que Está Completado
 
-### Características del Sitio
-- ✔️ Diseño responsivo (mobile-first)
-- ✔️ Navbar con navegación a todas las secciones
-- ✔️ Sección Hero con propuesta de valor
-- ✔️ Sección "Quiénes Somos" con información institucional
-- ✔️ Galería de 6 ejes temáticos (Salud, Educación, Ingresos, Participación, Deporte, Empresarial)
-- ✔️ Sección de Valores y Principios
-- ✔️ Sección de Experiencia/Logros
-- ✔️ Formulario de Contacto
-- ✔️ Página dedicada a Transparencia ESAL
-- ✔️ Sistema de tipografía y colores consistentes
-- ✔️ Animaciones con Intersection Observer (fade-in)
-- ✔️ Documentación interna (docs/)
+### Arquitectura & Estructura
+- ✔️ 9 páginas HTML semánticas (1 principal + 6 ejes + 1 transparencia + 1 plantilla)
+- ✔️ Estructura de carpetas organizada y escalable
+- ✔️ Documentación legal y financiera centralizada en `/docs`
 
-### Recursos de Estilo
-- **Fuentes**: Playfair Display (títulos), DM Sans (cuerpo)
-- **Colores**:
-  - Verde principal: `#1a6b47`
-  - Verde secundario: `#2d8f63`
-  - Dorado: `#c8962a`
-  - Fondos neutros
-- **Breakpoints**: Diseño adaptable a todos los tamaños de pantalla
+### Diseño & UX
+- ✔️ Diseño responsivo (mobile-first) - funciona en todos los dispositivos
+- ✔️ Sistema de navegación intuitiva con navbar persistente
+- ✔️ Paleta de colores consistente (verde institucional, dorado, neutrales)
+- ✔️ Tipografía profesional (Playfair Display para títulos, DM Sans para cuerpo)
+- ✔️ Animaciones de entrada con Intersection Observer (fade-in suave)
+- ✔️ Secciones visualmente diferenciadas con espaciado armónico
+
+### Contenido en Página Principal
+- ✔️ **Hero Section**: Propuesta de valor con badge institucional
+- ✔️ **Quiénes Somos**: Información institucional y contexto
+- ✔️ **Programas/Ejes**: Galería de 6 ejes temáticos con navegación
+- ✔️ **Valores y Principios**: Identidad y compromiso institucional
+- ✔️ **Experiencia/Logros**: Trayectoria desde 2009
+- ✔️ **Contacto**: Formulario de comunicación
+
+### Páginas Especializadas
+- ✔️ **Página de cada Eje**: Plantillas coherentes con hero, descripción y call-to-action
+- ✔️ **Página Transparencia ESAL**: Sección dedicada a rendición de cuentas
+- ✔️ **Plantilla Reutilizable**: Base para futuras páginas
+
+### Funcionalidades Técnicas
+- ✔️ **CSS Personalizado**: Variables CSS, flexbox/grid, responsive design
+- ✔️ **JavaScript**: Animaciones suaves, interactividad
+- ✔️ **Favicon**: Identidad visual en pestaña del navegador
+- ✔️ **Meta Tags**: Descripción y metadatos para SEO básico
+- ✔️ **Google Fonts**: Tipografía optimizada de Google
+- ✔️ **Crossorigin**: Atributos de seguridad configurados
+
+### Recursos Disponibles
+- ✔️ Logo oficial
+- ✔️ Estructura de carpetas para imágenes por eje
+- ✔️ Documentación legal (certificaciones, estatutos, estados financieros 2025)
+- ✔️ Informes de gestión y rendición de cuentas 2025
 
 ---
 
-## ❌ Lo que Falta (Pendiente)
+## ⚠️ Lo que Falta o Necesita Completarse
 
-### 1. **Imágenes** (`assets/img/`)
-El directorio está vacío. Se necesitan las siguientes imágenes:
-
-```
-assets/img/
-├── favicon.svg                          # Icono de la página
-├── logo.svg / logo.png                  # Logo principal de la fundación
-├── hero-image.jpg / hero-image.png      # Imagen hero de la página principal
-├── eje-salud/
-│   ├── icon.svg                         # Icono representativo
-│   └── imagen-actividad.jpg             # Foto de actividades
-├── eje-educacion/
-│   ├── icon.svg
-│   └── imagen-actividad.jpg
-├── eje-mejoramiento-del-ingreso/
-│   ├── icon.svg
-│   └── imagen-actividad.jpg
-├── eje-participacion-social/
-│   ├── icon.svg
-│   └── imagen-actividad.jpg
-├── eje-recreacion-y-deporte/
-│   ├── icon.svg
-│   └── imagen-actividad.jpg
-├── eje-desarrollo-comunitario-empresarial/
-│   ├── icon.svg
-│   └── imagen-actividad.jpg
-└── team/                                # Fotos del equipo (opcional)
-    ├── persona1.jpg
-    ├── persona2.jpg
-    └── persona3.jpg
-```
-
-### 2. **Documentos para Transparencia ESAL** (`docs/`)
-Aunque existen algunos archivos, falta organizar y complementar:
-
-- ❌ Vincular documentos en la página `transparencia-esal.html` con descargas
-- ❌ Agregar más documentos si es necesario:
-  - Acuerdos y decisiones de la Junta Directiva
+### 📄 Documentación de Transparencia ESAL
+En `docs/` existen archivos pero necesitan:
+- ✔️ Documentos ya presentes (2025)
+- ❌ Vincular en `transparencia-esal.html` con descargas
+- ❌ Agregar enlaces descargables para cada categoría
+- ⚠️ Considerar agregar:
+  - Acuerdos de Junta Directiva
   - Informes de auditoría
   - Políticas organizacionales
-  - Conflictos de interés resueltos
-  - Planes de mejora
+  - Registro de conflictos de interés
+  - Planes de mejora institucional
 
-### 3. **Contenido de Texto**
-- ⚠️ Verificar que cada página de ejes tenga descripción completa
-- ⚠️ Agregar números/estadísticas de impacto en cada eje
-- ⚠️ Incluir fotos/testimonios de beneficiarios
+### 📝 Contenido de Texto
+- ⚠️ Completar descripción detallada en cada página de ejes
+- ⚠️ Agregar estadísticas/números de impacto
+- ⚠️ Incluir testimonios de beneficiarios
+- ⚠️ Expandir sección "Experiencia/Logros" con casos específicos
+
+### 🔧 Funcionalidades Adicionales
+- ⚠️ Validar y conectar formulario de contacto a servicio de email
+- ⚠️ Implementar validación de formularios en cliente
+- ⚠️ Agregar Google Analytics para monitoreo de tráfico
+- ⚠️ Optimizar imágenes para web (compresión)
 
 ---
 
 ## 🚀 Cómo Usar Este Proyecto
 
-### Abrir Localmente
+### 1. Abrir Localmente
+**Opción A - Directamente en navegador:**
 1. Descarga/Clona el proyecto
-2. Abre `index.html` en tu navegador
-3. O usa un servidor local:
-   ```bash
-   # Con Python 3
-   python -m http.server 8000
-   
-   # Con Node.js (si tienes live-server instalado)
-   live-server
-   ```
-4. Accede a `http://localhost:8000`
+2. Abre `index.html` en tu navegador (haz doble clic)
 
-### Editar Contenido
-- **HTML**: Modifica directamente los archivos `.html` en la raíz
-- **Estilos**: Edita `assets/css/styles.css`
-- **JavaScript**: Modifica `assets/js/main.js`
+**Opción B - Con servidor local (recomendado):**
+```bash
+# Con Python 3.x
+python -m http.server 8000
 
-### Agregar Imágenes
-1. Coloca los archivos en `assets/img/` (organizados por carpeta si es necesario)
-2. Actualiza las rutas en los HTML:
-   ```html
-   <img src="assets/img/nombre-imagen.jpg" alt="Descripción">
-   ```
+# Con Python 2.x
+python -m SimpleHTTPServer 8000
 
-### Vincular Documentos de Transparencia
-En `transparencia-esal.html`, crea enlaces a los documentos:
+# Con Node.js (requiere tener live-server instalado)
+live-server
+```
+3. Accede a `http://localhost:8000` en tu navegador
+
+### 2. Editar Contenido
+
+**Modificar HTML:**
+- Abre cualquier archivo `.html` en tu editor de texto
+- Edita el contenido directamente
+- Guarda y recarga el navegador
+
+**Modificar Estilos:**
+- Abre `assets/css/styles.css`
+- Variables CSS principales (colores, tipografía) están al inicio
+- Los cambios se aplican automáticamente
+
+**Modificar JavaScript:**
+- Abre `assets/js/main.js`
+- Contiene: animaciones, validaciones, interactividad
+
+### 3. Agregar/Reemplazar Imágenes
+
+**Paso 1: Preparar imagen**
+- Optimiza el tamaño (máx. 1MB para web)
+- Guarda en formato JPG o PNG
+
+**Paso 2: Colocar en carpeta**
+```
+assets/img/
+├── logo.jpg                    # Logo principal
+├── hero-image.jpg              # Imagen hero
+└── ejes/
+    ├── salud/image.jpg
+    ├── educacion/image.jpg
+    ├── ingresos/image.jpg
+    ├── participacion/image.jpg
+    ├── recreacion/image.jpg
+    └── desarrollo/image.jpg
+```
+
+**Paso 3: Referenciar en HTML**
 ```html
-<a href="docs/certificaciones/rut.txt" download>Descargar RUT</a>
+<img src="assets/img/nombre-archivo.jpg" alt="Descripción clara">
+```
+
+### 4. Vincular Documentos de Transparencia
+
+En `transparencia-esal.html`, agrega enlaces descargables:
+
+```html
+<div class="documento">
+  <h4>Certificado de Existencia y Representación</h4>
+  <a href="docs/certificaciones/certificado-existencia-representacion.txt" download>
+    📥 Descargar
+  </a>
+</div>
+
+<div class="documento">
+  <h4>RUT - Registro Único Tributario</h4>
+  <a href="docs/certificaciones/rut.txt" download>
+    📥 Descargar
+  </a>
+</div>
+```
+
+### 5. Agregar Nuevas Páginas de Ejes
+
+1. Duplica `eje-template.html`
+2. Renómbralo: `eje-nombre.html`
+3. Edita:
+   - `<title>` - Nombre del eje
+   - `.page-title` - Nombre visible
+   - `.page-lead` - Descripción
+   - `.page-hero-media` - Imagen del eje
+4. Agrega enlace en `index.html` sección "ejes"
+
+---
+
+## 🔧 Tecnologías & Stack
+
+| Tecnología | Uso | Versión |
+|------------|-----|---------|
+| **HTML5** | Estructura semántica | Estándar |
+| **CSS3** | Diseño responsivo, variables, animaciones | Estándar |
+| **JavaScript** | Vanilla JS (sin frameworks) | ES6+ |
+| **Google Fonts** | Playfair Display, DM Sans | Ultima |
+| **Archivos estáticos** | Documentación | Múltiples formatos |
+
+### Diseño Responsivo
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+### Paleta de Colores Institucional
+```css
+--color-primary: #1a6b47;      /* Verde institucional */
+--color-secondary: #2d8f63;    /* Verde secundario */
+--color-accent: #c8962a;       /* Dorado */
+--color-light: #f5f5f5;        /* Neutral claro */
+--color-dark: #2c2c2c;         /* Neutral oscuro */
 ```
 
 ---
 
-## 🔧 Tecnologías Usadas
+## � Roadmap & Próximos Pasos
 
-- **HTML5**: Estructura semántica
-- **CSS3**: Diseño responsive, variables CSS, flexbox/grid
-- **JavaScript**: Vanilla JS (sin frameworks)
-- **Fuentes**: Google Fonts (Playfair Display, DM Sans)
+### 🔴 **CRÍTICO - Debe hacerse primero**
 
----
+1. **Completar página Transparencia ESAL** con enlaces descargables
+   - Requisito legal/institucional
+   - Aprovechar documentos ya disponibles en `/docs`
+   - Tiempo estimado: 1-2 horas
 
-## 📝 Próximos Pasos (Recomendaciones)
+2. **Validar y enriquecer contenido de texto**
+   - Revisar y actualizar descripción de cada eje
+   - Agregar números/estadísticas de impacto
+   - Incluir testimonios de beneficiarios
+   - Tiempo estimado: 3-5 horas
 
-### Inmediato (Alta Prioridad)
-1. ⭐ Agregar todas las imágenes faltantes
-2. ⭐ Completar la página de Transparencia ESAL con enlaces descargables
-3. ⭐ Revisar y validar contenido de texto en todos los ejes
+### 🟡 **IMPORTANTE - Próximas 2-3 semanas**
+- Configurar formulario de contacto (backend: email)
+- Implementar validación de formularios completa
+- Agregar Google Analytics
+- Optimizar imágenes para web (compresión)
+- Verificar SEO básico (meta tags, keywords)
+- Pruebas en diferentes navegadores
 
-### Corto Plazo
-- Agregar Google Analytics para medir tráfico
-- Configurar formulario de contacto (conectar a servicio de email)
-- Optimizar imágenes para web
-- Agregar SEO (meta tags adicionales)
-
-### Mediano Plazo
-- Considerar agregar blog/noticias
-- Crear galería dinámicas con lightbox
-- Agregar mapa interactivo de ubicación
-- Mejorar accesibilidad (WCAG 2.1)
-
-### Largo Plazo
+### 🟢 **FUTURO - Mejoras a Largo Plazo**
+- Agregar blog o sección de noticias
+- Implementar galería de fotos con lightbox
+- Mapa interactivo de ubicación
+- Mejorar accesibilidad WCAG 2.1
 - Migrar a CMS estático (Hugo, Jekyll, 11ty)
-- Agregar backend para manejo de formularios
-- Implementar búsqueda de documentos
-- Versión en inglés
+- Backend para manejo avanzado de formularios
+- Sistema de búsqueda de documentos
+- Versión en inglés del sitio
 
 ---
 
-## 📧 Contacto
+## 📊 Estadísticas del Proyecto
 
-**Fundación Creemos Región**  
-📍 Villavicencio, Meta - Colombia  
-📅 Desde 2009  
-🌐 [Ver sitio web](./index.html)
+| Métrica | Valor |
+|---------|-------|
+| Páginas HTML | 9 |
+| Ejes temáticos | 6 |
+| Archivos documentación | 8 |
+| Directorios de imágenes | 7 |
+| Archivos CSS | 1 |
+| Archivos JS | 1 |
+| Idioma | Español |
+| Framework | Ninguno (vanilla) |
+| Tamaño aproximado (sin imágenes) | ~150 KB |
 
 ---
 
-## 📄 Licencia
+## � Tips & Mejores Prácticas
 
-Este proyecto es propiedad de la Fundación Creemos Región. Todos los derechos reservados.
+### Para Editar HTML
+- Usa nombres de clases descriptivos (`.eje-card`, `.hero-content`)
+- Mantén la estructura semántica (nav, header, main, section, footer)
+- Comenta secciones complejas para futuras ediciones
+- Valida HTML: https://validator.w3.org/
+
+### Para Estilos CSS
+- Las variables están al inicio del archivo para fácil actualización
+- Mobile-first: estilo base para móvil, luego media queries
+- Usa `clamp()` para tamaños responsivos sin media queries
+- Prefiere flexbox y grid sobre float
+
+### Para Imágenes
+- Formato JPG para fotos (mejor compresión)
+- PNG para iconos y logos (fondo transparente)
+- Tamaño máximo 1MB por imagen
+- Usa Alt text descriptivo para accesibilidad y SEO
+
+### Para Rendimiento
+- Lazy loading de imágenes (nativo con `loading="lazy"`)
+- Compresión de imágenes antes de subir
+- Minificar CSS y JS para producción
+- Cachear recursos estáticos
 
 ---
 
-**Última actualización**: 21 de abril de 2026
+## 📧 Información de Contacto
+
+**Fundación Creemos Región**
+- 📍 **Ubicación**: Villavicencio, Meta - Colombia
+- 📅 **Fundada**: 2009
+- 🌐 **Sitio Web**: [Ver](./index.html)
+- 📧 **Contacto**: Ver formulario en la web
+
+---
+
+## 📄 Licencia & Derechos
+
+Este proyecto es propiedad intelectual de la **Fundación Creemos Región**. 
+Todos los derechos reservados © 2009-2026.
+
+Para usos externos, comunicarse con la fundación directamente.
+
+---
+
+## 📝 Historial de Cambios
+
+| Fecha | Versión | Cambios |
+|-------|---------|---------|
+| 21 Abr 2026 | 1.2 | README actualizado con contenido actual |
+| - | 1.1 | Estructura inicial + 6 ejes + transparencia |
+| - | 1.0 | Plantilla base y diseño |
+
+---
+
+**Última actualización**: 21 de abril de 2026  
+**Mantenedor**: Equipo Fundación Creemos Región  
+**Estado**: En desarrollo activo ✨
