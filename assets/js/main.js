@@ -120,3 +120,53 @@
     });
   }
 });
+
+const form = document.getElementById("form-contacto");
+const status = document.getElementById("form-status");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Validación simple
+    const nombre = document.getElementById("nombre").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+
+    if (nombre.length < 3) {
+      status.textContent = "El nombre debe tener al menos 3 caracteres.";
+      status.style.color = "red";
+      return;
+    }
+
+    if (!email.includes("@")) {
+      status.textContent = "Ingrese un correo válido.";
+      status.style.color = "red";
+      return;
+    }
+
+    if (mensaje.length < 10) {
+      status.textContent = "El mensaje es demasiado corto.";
+      status.style.color = "red";
+      return;
+    }
+
+    // Envío a Netlify
+    const data = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: data
+      });
+
+      status.textContent = "Mensaje enviado correctamente. Nos comunicaremos pronto.";
+      status.style.color = "green";
+
+      form.reset();
+    } catch (error) {
+      status.textContent = "Error al enviar el mensaje. Intente nuevamente.";
+      status.style.color = "red";
+    }
+  });
+}
